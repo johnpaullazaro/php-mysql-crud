@@ -1,13 +1,11 @@
  
 <?php
 
+
 function connectDB(){ 
-$servername = "localhost";
-$username = "jp_admin";
-$password = "AO[2P-jY[yg/ooPA";
-$db = "inventory";
+  
 // Create connection
-$conn = new mysqli($servername, $username, $password,$db);
+$conn = new mysqli("localhost", "jp_admin","AO[2P-jY[yg/ooPA","inventory");
 
 // Check connection
 if ($conn->connect_error) {
@@ -15,8 +13,6 @@ if ($conn->connect_error) {
 }
 
 return $conn;
-//echo "Connected successfully";
-
 }
 
 ?>

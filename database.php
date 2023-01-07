@@ -4,7 +4,7 @@
 
 function connectDB(){ 
   
-// Create connection
+// Connect to database
 $conn = new mysqli("localhost", "jp_admin","AO[2P-jY[yg/ooPA","inventory");
 
 // Check connection

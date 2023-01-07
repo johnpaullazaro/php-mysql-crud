@@ -29,10 +29,9 @@
 <ul class="list-group">
    
 <?php
-
-$sql = "SELECT * FROM products";
+ 
 $conn = connectDB();
-$result = $conn->query($sql);
+$result = $conn->query("SELECT * FROM products");
 
 if ($result->num_rows > 0) {
   // output data of each row

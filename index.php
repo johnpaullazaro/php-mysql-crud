@@ -36,14 +36,10 @@ $result = $conn->query("SELECT * FROM products");
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo "<li class='list-group-item'>".$row["product_name"]."
-   
-    <a class='pull-right ' style='margin-left:10px;' 
-    href='delete.php?id=".$row["product_id"]."'>Delete</a>  
-    <a class='pull-right' 
-    href='update.php?id=".$row["product_id"]."'>Edit</a>
-    </li>";
-    
+    echo "<li class='list-group-item'>"
+    .$row["product_name"]
+    ."<a href='update.php?id=".$row["product_id"]."' class='pull-right'>Edit</a>"
+    ."</li>"; 
   }
 } else {
   echo "0 results";
@@ -54,8 +50,6 @@ $conn->close();
 </ul>
 
 </div>
-
-
-
+ 
 </body>
 </html>
